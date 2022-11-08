@@ -474,3 +474,4 @@ MonoBehaviour:
   unitCount: 0
   unitCountUpTime: 1
   _team: {fileID: 11400000, guid: 796a0257b5f634349ab3b60d1343e371, type: 2}
+  unitPrefab: {fileID: 1565116106762388268, guid: 94374c5f129ce5d4dacf27e83c183a19, type: 3}

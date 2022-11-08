@@ -5,4 +5,6 @@ public class Team :  ScriptableObject
 {
     public Color color;
     public bool canProduceUnits = false;
+    public int count = 0;
+
 }
