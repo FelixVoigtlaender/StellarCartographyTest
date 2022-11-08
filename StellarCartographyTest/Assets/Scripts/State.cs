@@ -30,6 +30,7 @@ public class State : MonoBehaviour
     public void SetTeam(Team team)
     {
         this._team = team;
+        HandleVis();
     }
 
     public Team GetTeam()
@@ -93,6 +94,10 @@ public class State : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(unitCountUpTime);
+            if(!GameManager.Instance.isInGame)
+                continue;
+            
+            
             if(_team == null)
                 continue;
             if(!_team.canProduceUnits)

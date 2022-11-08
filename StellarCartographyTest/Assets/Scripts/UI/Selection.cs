@@ -38,7 +38,7 @@ public class Selection : MonoBehaviour, IDragHandler, IPointerDownHandler, IPoin
     
     public void OnPointerUp(PointerEventData eventData)
     {
-        
+
         Vector2 position = Camera.main.ScreenToWorldPoint(eventData.position);
         Collider2D collider2D = Physics2D.OverlapPoint(position, stateLayer);
         if (!collider2D)

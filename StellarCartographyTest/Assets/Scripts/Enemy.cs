@@ -10,9 +10,12 @@ public class Enemy : MonoBehaviour
     public Team team;
     private IEnumerator Start()
     {
+        yield return new WaitForSeconds(Random.Range(5, 13f));
         while (true)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(Random.Range(1, 13f));
+            if(!GameManager.Instance.isInGame)
+                continue;
             State[] myStates = GetMyStates();
             State[] otherStates = GetOtherStates();
             if (Random.Range(0, 1f) < 0.3f)
